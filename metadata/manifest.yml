@@ -13,4 +13,4 @@ Provides:
 Scaling:
   Min: 1
   Max: -1
-
+Source-Url: https://github.com/mateio/openshift-logstash-cartridge/archive/master.zip
