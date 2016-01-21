@@ -20,3 +20,4 @@ if ! [ ${OPENSHIFT_LOGSTASH_ES_PORT} ]; then
 fi
 
 curl -s https://download.elastic.co/logstash/logstash/logstash-2.0.0.tar.gz | tar xz
+$OPENSHIFT_LOGSTASH_DIR/logstash-2.0.0/bin/plugin install logstash-input-jdbc
