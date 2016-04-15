@@ -174,7 +174,7 @@ filebeat:
 <% if ENV['OPENSHIFT_PHP_LOG_DIR'] %>
     -
       paths:
-        - <%= ENV['OPENSHIFT_PHP_LOG_DIR] %>php.log
+        - <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>php.log
       type: log
 
       # Ignore files which are older then 24 hours
@@ -318,7 +318,7 @@ output:
     tls:
       # List of root certificates for HTTPS server verifications
 <% if ENV['OPENSHIFT_FILEBEAT_LOGSTASH_TLS_CA'] %>
-      certificate_authorities: ["<%= filebeat_ca.crt %>"]
+      certificate_authorities: ["<%= ENV['OPENSHIFT_FILEBEAT_LOGSTASH_TLS_CA'] %>"]
 <% end %>
 
       # Certificate for TLS client authentication
