@@ -21,7 +21,7 @@ First, configure the application with the appropriate environment variables. The
     $ rhc set-env --app my-app --env "OPENSHIFT_FILEBEAT_LOGSTASH_PORT=XXXX"
 
     # Add cartridge
-    $ rhc cartridge add -a your-app-name https://cartreflect-claytondev.rhcloud.com/github/acrollet/openshift-filebeat-cartridge
+    $ rhc cartridge add -a your-app-name https://cartreflect-claytondev.rhcloud.com/github/acrollet/openshift-cartridge-filebeat
 
 ## License
 
