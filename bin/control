@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pid=logstash.pid
+pid=filebeat.pid
 
 function status() {
     client_result $pwd
@@ -13,12 +13,12 @@ function update() {
 
 function start() {
     if ! [ -f $pid ]; then
-        erb conf/logstash.conf.erb > logstash.conf
-        nohup logstash-2.0.0/bin/logstash agent -f logstash.conf -l logstash.log &
+        erb conf/filebeat.yml.erb > filebeat.yml
+        nohup filebeat-1.2.1-x86_64/filebeat agent -c filebeat.yml &
 
         ret=$?
         if [ $ret -ne 0 ]; then
-            echo "Logstash failed to start - $ret" 1>&2
+            echo "filebeat failed to start - $ret" 1>&2
             return $ret
         fi
         echo $! > $pid
@@ -30,7 +30,7 @@ function stop() {
         kill -s SIGTERM $(cat $pid)
         rm $pid
     else
-	echo "Logstash is already stopped" 1>&2
+        echo "filebeat is already stopped" 1>&2
         return 0
     fi
 }
