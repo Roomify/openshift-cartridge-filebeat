@@ -2,6 +2,7 @@ Name: filebeat
 Cartridge-Short-Name: filebeat
 Display-Name: filebeat 1.2.1
 Version: "1.2.1"
+Source-Url: git@github.com:acrollet/openshift-cartridge-filebeat.git
 Versions: ["1.2.1"]
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: custom
