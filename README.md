@@ -5,7 +5,7 @@ This is a simple cartridge for making filebeat easily available in your applicat
 
 ## Environment Variables
 
-These environment variables are used when configuring Logstash:
+These environment variables are used when configuring Filebeat:
 
  * **`OPENSHIFT_FILEBEAT_LOGSTASH_HOST`**: URL of the logstash host to log to. Required.
  * **`OPENSHIFT_FILEBEAT_LOGSTASH_PORT`**: Port logstash is running on. Required.
@@ -21,7 +21,7 @@ First, configure the application with the appropriate environment variables. The
     $ rhc set-env --app my-app --env "OPENSHIFT_FILEBEAT_LOGSTASH_PORT=XXXX"
 
     # Add cartridge
-    $ rhc cartridge add -a your-app-name https://cartreflect-claytondev.rhcloud.com/github/acrollet/openshift-logstash-cartridge
+    $ rhc cartridge add -a your-app-name https://cartreflect-claytondev.rhcloud.com/github/acrollet/openshift-filebeat-cartridge
 
 ## License
 
