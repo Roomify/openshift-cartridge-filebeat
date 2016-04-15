@@ -14,7 +14,7 @@ function update() {
 function start() {
     if ! [ -f $pid ]; then
         erb conf/filebeat.yml.erb > filebeat.yml
-        nohup filebeat-1.2.1-x86_64/filebeat agent -c filebeat.yml &
+        nohup filebeat-1.2.1-x86_64/filebeat -c filebeat.yml &
 
         ret=$?
         if [ $ret -ne 0 ]; then
