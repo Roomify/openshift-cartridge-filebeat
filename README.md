@@ -10,7 +10,7 @@ These environment variables are used when configuring Filebeat:
  * **`OPENSHIFT_FILEBEAT_LOGSTASH_HOST`**: URL of the logstash host to log to. Required.
  * **`OPENSHIFT_FILEBEAT_LOGSTASH_PORT`**: Port logstash is running on. Required.
  * **`OPENSHIFT_FILEBEAT_LOGSTASH_TLS`**: Configure logstash to use TLS. Optional.
- * **`OPENSHIFT_FILEBEAT_LOGSTASH_TLS_CA`**: CA certificate text. Optional.
+ * **`OPENSHIFT_FILEBEAT_LOGSTASH_TLS_CA_FILENAME`**: CA certificate filename. Optional. e.g. ~/app-root/repo/resources/logstash_ca.crt
 
 ## Installation
 
