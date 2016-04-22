@@ -170,6 +170,16 @@ filebeat:
   #config_dir:
   #
 
+# TODO: add config for custom log locations.
+<% if ENV['OPENSHIFT_PHP_LOG_DIR'] %>
+    -
+      paths:
+        - <%= ENV['OPENSHIFT_PHP_LOG_DIR'] %>*.json.log
+      type: log
+
+      # Ignore files which are older then 24 hours
+      ignore_older: 1h
+<% end %>
 
 <% if ENV['OPENSHIFT_PHP_LOG_DIR'] %>
     -
@@ -185,7 +195,6 @@ filebeat:
         type: apache
         server: localhost
 <% end %>
-
 
 
 ###############################################################################
