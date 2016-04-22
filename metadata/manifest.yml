@@ -6,8 +6,8 @@ Versions: ["1.2.1"]
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: custom
 Categories:
- - service
- - filebeat
+  - embedded
+  - plugin
 Provides:
  - filebeat
 Scaling:
@@ -15,5 +15,5 @@ Scaling:
   Max: -1
 Group-Overrides:
   - components:
-    - custom-filebeat-1.2.1
+    - filebeat
     - web_framework
