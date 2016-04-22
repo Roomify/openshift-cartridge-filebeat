@@ -15,5 +15,5 @@ Scaling:
   Max: -1
 Group-Overrides:
   - components:
-    - filebeat
+    - custom-filebeat-1.2.1
     - web_framework
